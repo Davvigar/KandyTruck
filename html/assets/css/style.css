@@ -1,0 +1,62 @@
+:root {
+    --fs-1: 5rem;
+    --fs-2: 4.5rem;
+    --fs-3: 2.4rem;
+    --fs-4: 1.8rem;
+    --fs-5: 1.4rem;
+    --fs-6: 1.2rem;
+    --ff-fredoka: 'Fredoka', sans-serif;
+    --logo-size: 100px; 
+  }
+
+  header{
+    width: 100%;
+    position:fixed;
+    top:0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: transparent;
+  }
+
+  .logo img {
+    width: var(--logo-size); 
+    height: auto; 
+    padding-left: 10%;
+    padding-top: 10%;
+}
+  #nav-items {
+    display: flex;
+    align-items: center;
+    
+    
+}
+  #nav-items li{
+    font-family: var(--ff-fredoka);
+    list-style: none;
+    margin-left: 100px;
+    text-transform: capitalize;
+    font-weight: bolder;
+ }
+ #nav-items a {
+    text-decoration: none;
+    color:inherit;
+    
+ }
+ .hero-section{
+
+ }
+ .hero-content{
+
+ }
+
+ .hero-video{
+    width: 100%;
+    height: max-content;
+    position: absolute; /* Posiciona el video en relación al contenedor */
+    top: 0; /* Alinea el video con la parte superior de la página */
+    left: 0; /* Alinea el video con el lado izquierdo de la página */
+    height: 100vh; /* Asegura que el video ocupe toda la altura de la ventana */
+    z-index: -1; /* Envía el video detrás del contenido, incluido el header */
+}
