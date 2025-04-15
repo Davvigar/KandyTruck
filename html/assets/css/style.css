@@ -1,62 +1,209 @@
 :root {
+    --comex-paleacate : rgb(255,236,179);
+    --green-cyane : rgb(168, 230, 207);
+    --pale-orange : rgb(255, 211, 182);
+    --bg-gradient: radial-gradient(circle at 10.83599885304769% 39.17187690734863%, #A8E6CF 0%, 30%, rgba(168, 230, 207, 0) 60%), 
+            radial-gradient(circle at 69.58594004313152% 64.67191060384114%, #FFD3B6 0%, 33.234%, rgba(255, 211, 182, 0) 58%), 
+            radial-gradient(circle at 48.9013671875% 49.521484375%, rgba(0, 0, 0, 0) 0%, 100%, rgba(0, 0, 0, 0) 100%);
     --fs-1: 5rem;
     --fs-2: 4.5rem;
     --fs-3: 2.4rem;
     --fs-4: 1.8rem;
     --fs-5: 1.4rem;
     --fs-6: 1.2rem;
-    --ff-fredoka: 'Fredoka', sans-serif;
+    --ff-luckiest-guy: 'Luckiest Guy', cursive;
     --logo-size: 100px; 
+    --transition: 0.25s ease;
   }
 
+
+
   header{
+    
     width: 100%;
     position:fixed;
     top:0;
     left: 0;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     background-color: transparent;
   }
+
+  .off-screen-menu{
+    background-color: transparent;
+    height: 40vh;
+    width: 100%;
+    max-width: 600px;
+    position: fixed; 
+    top: 0;
+    left: -800px;
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: flex-start; /* Align items to the left */
+    padding: 1rem 4rem; /* Reduced top padding from 2rem to 1rem */
+    transition: 0.3s ease;
+    text-decoration: none;
+    }
+    
+    .off-screen-menu.active{
+      left: 0;
+    }
+
+    nav{
+      padding: 1rem;
+      display: flex;
+      background-color: transparent;
+    }
+
+    .ham-menu{
+      height: 50px;
+      width: 50px;
+      margin-right: auto;
+      position: relative;
+
+    }
+    .ham-menu span{
+      height: 5px;
+      width: 100%;
+      background-color: black;
+      border-radius: 25px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      transition:.3s ease;
+    }
+    .ham-menu span:nth-child(1){
+      top: 25%;
+    }
+    .ham-menu span:nth-child(3){
+      top: 75%;
+    }
+
+
+    .ham-menu.active span:nth-child(1){
+      top: 50%;
+      transform: translate(-50%,-50%) rotate(45deg);
+      background-color: white;
+      
+    }
+    .ham-menu.active span:nth-child(2){
+      opacity: 0;
+      
+    }
+    .ham-menu.active span:nth-child(3){
+      top: 50%;
+      transform: translate(-50%,-50%) rotate(-45deg);
+      background-color: white;
+    }
+
+    .menu-items{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      font-size: 2rem;
+      color: white;
+      font-family: var(--ff-luckiest-guy);
+      font-weight: 400;
+      list-style: none; 
+      flex: 2; /* Toma dos partes del espacio disponible */
+      
+      margin-top: -3rem; /* Negative margin to move list up */
+      margin-left: -3rem; /* Add some indent from the logo */
+      padding-top: 0; /* Eliminar el padding superior si existe */
+    }
+
+    .menu-item a {
+      text-decoration: none; 
+      color: white; 
+    }
+
+    .menu-item {
+      margin-bottom: 1rem; /* Ajusta el espacio entre elementos de la lista */
+    }
+
+    .white-worm img{
+      width: 115px;
+      height: auto;
+      transform: translateY(-0.85rem); /* Adjusted transform value */
+      padding-left: 12px;
+     
+    }
+
+    .white-worm {
+      flex: 1; /* Toma una parte del espacio disponible */
+      align-self: flex-start; /* Alinea el contenedor al inicio */
+      margin-top: -1rem; /* Negative margin to move it up */
+      margin-right: 2rem; /* Añadir espacio después de la imagen */
+      margin-bottom: 1rem; /* Reduced from 2rem to bring list closer */
+    }
+
+
+
 
   .logo img {
     width: var(--logo-size); 
     height: auto; 
-    padding-left: 10%;
     padding-top: 10%;
 }
-  #nav-items {
-    display: flex;
-    align-items: center;
-    
-    
-}
-  #nav-items li{
-    font-family: var(--ff-fredoka);
-    list-style: none;
-    margin-left: 100px;
-    text-transform: capitalize;
-    font-weight: bolder;
- }
- #nav-items a {
-    text-decoration: none;
-    color:inherit;
-    
- }
- .hero-section{
 
+.logo {
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+.off-screen-menu.active ~ .logo {
+    opacity: 0;
+}
+
+
+
+
+ .hero-section{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; 
+    justify-content: center;
+    padding-right: 10%; 
+    margin-top: -15vh;
  }
+
+.hero-section h1 {
+    font-size: var(--fs-1);
+    line-height: 1;
+    font-family: var(--ff-luckiest-guy);
+   
+    color: pink;
+    text-align: right;
+    margin: 0;
+    -webkit-text-stroke: 2px black; /* Añade borde negro de 2px */
+}
+
+.hero-section h2 {
+    font-size: var(--fs-2);
+    line-height: 1;
+    font-family: var(--ff-luckiest-guy);
+    background: var(--bg-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-align: right;
+    margin: 0;
+    -webkit-text-stroke: 2px black; /* Añade borde negro de 2px */
+}
+
  .hero-content{
 
  }
 
  .hero-video{
+    position: fixed;
+    top: -40px; 
+    left: 0;
     width: 100%;
-    height: max-content;
-    position: absolute; /* Posiciona el video en relación al contenedor */
-    top: 0; /* Alinea el video con la parte superior de la página */
-    left: 0; /* Alinea el video con el lado izquierdo de la página */
-    height: 100vh; /* Asegura que el video ocupe toda la altura de la ventana */
-    z-index: -1; /* Envía el video detrás del contenido, incluido el header */
+    height: 100vh;
+    z-index: -1;
 }
