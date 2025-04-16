@@ -85,7 +85,8 @@
     .ham-menu.active span:nth-child(1){
       top: 50%;
       transform: translate(-50%,-50%) rotate(45deg);
-      background-color: white;
+      background-color: pink;
+      
       
     }
     .ham-menu.active span:nth-child(2){
@@ -95,20 +96,23 @@
     .ham-menu.active span:nth-child(3){
       top: 50%;
       transform: translate(-50%,-50%) rotate(-45deg);
-      background-color: white;
+      background-color: var(--green-cyane);
+      -webkit-text-stroke: 1px black; 
     }
 
     .menu-items{
       display: flex;
       flex-direction: column;
-      align-items: center;
-      text-align: center;
+      align-items: left;
+      text-align: left;
       font-size: 2rem;
       color: white;
       font-family: var(--ff-luckiest-guy);
       font-weight: 400;
       list-style: none; 
       flex: 2; /* Toma dos partes del espacio disponible */
+      -webkit-text-stroke: 1px black; 
+      
       
       margin-top: -3rem; /* Negative margin to move list up */
       margin-left: -3rem; /* Add some indent from the logo */
@@ -207,3 +211,52 @@
     height: 100vh;
     z-index: -1;
 }
+
+.pink-o {
+    color: pink;
+    
+}
+
+.green-e {
+    color: var(--green-cyane);
+    
+}
+
+
+
+/* .grid-container {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: repeat(10, 1fr);
+  gap: 13px;
+}
+  
+.div1 {
+  grid-column: span 5 / span 5;
+  grid-row: span 3 / span 3;
+}
+
+.div3 {
+  grid-column: span 5 / span 5;
+  grid-row: span 3 / span 3;
+  grid-column-start: 6;
+}
+
+.div4 {
+  grid-column: span 10 / span 10;
+  grid-row: span 4 / span 4;
+  grid-row-start: 4;
+}
+
+.div5 {
+  grid-column: span 5 / span 5;
+  grid-row: span 2 / span 2;
+  grid-row-start: 8;
+}
+
+.div6 {
+  grid-column: span 5 / span 5;
+  grid-row: span 2 / span 2;
+  grid-column-start: 6;
+  grid-row-start: 8;
+} */
