@@ -1,3 +1,9 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 :root {
     --comex-paleacate : rgb(255,236,179);
     --green-cyane : rgb(168, 230, 207);
@@ -21,13 +27,13 @@
   header{
     
     width: 100%;
-    position:fixed;
-    top:0;
+    position: fixed;
+    top: 0;
     left: 0;
     display: flex;
     align-items: center;
-    /* justify-content: space-between; */
     background-color: transparent;
+    z-index: 1000;
   }
 
   .off-screen-menu{
@@ -172,8 +178,11 @@
     align-items: flex-end; 
     justify-content: center;
     padding-right: 10%; 
-    margin-top: -15vh;
- }
+    margin-top: 0;
+    position: relative;
+    z-index: 2;
+    padding-bottom: 300px;
+}
 
 .hero-section h1 {
     font-size: var(--fs-1);
@@ -204,12 +213,30 @@
  }
 
  .hero-video{
-    position: fixed;
-    top: -40px; 
+    position: absolute;
+    top: 0;
     left: 0;
     width: 100%;
     height: 100vh;
     z-index: -1;
+    margin: 0;
+    padding: 0;
+}
+
+.hero-video video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero-container {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+   
 }
 
 .pink-o {
@@ -222,15 +249,40 @@
     
 }
 
-
-
-/* .grid-container {
-  display: grid;
-  grid-template-columns: repeat(10, 1fr);
-  grid-template-rows: repeat(10, 1fr);
-  gap: 13px;
+.products-section {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    background-color: #E8E8E8;
+    padding: 2rem;
+    z-index: 1;
+    margin-top: -70px;
 }
-  
+
+body {
+    overflow-x: hidden;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(10, 1fr);
+    gap: 13px;
+    width: 100%;
+    height: 100vh;
+    padding: 2rem;
+}
+
+.div1, .div3, .div4, .div5, .div6 {
+    background-color: var(--green-cyane);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    color: white;
+    border-radius: 10px;
+}
+
 .div1 {
   grid-column: span 5 / span 5;
   grid-row: span 3 / span 3;
@@ -259,4 +311,22 @@
   grid-row: span 2 / span 2;
   grid-column-start: 6;
   grid-row-start: 8;
-} */
+}
+
+.wave {
+    position: absolute;
+    top: -70px;
+    left: -5px;
+    width: calc(100% + 10px);
+    height: 70px;
+    overflow: hidden;
+}
+
+.wave svg {
+    position: relative;
+    width: 102%;
+    height: 100%;
+    display: block;
+    left: -1%;
+}
+
