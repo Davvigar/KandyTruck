@@ -176,23 +176,38 @@
     display: flex;
     flex-direction: column;
     align-items: flex-end; 
-    justify-content: center;
-    padding-right: 10%; 
-    margin-top: 0;
+    justify-content: flex-start;
+    padding-right: 5%; 
+    margin-top: 100px;
     position: relative;
     z-index: 2;
     padding-bottom: 300px;
 }
 
+.truck-image {
+    position: absolute;
+    top: 12%;
+    left: 92%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+    width: 180px;
+    height: auto;
+    margin-top: -100px;
+}
+
+
+
 .hero-section h1 {
     font-size: var(--fs-1);
     line-height: 1;
     font-family: var(--ff-luckiest-guy);
-   
     color: pink;
     text-align: right;
     margin: 0;
-    -webkit-text-stroke: 2px black; /* Añade borde negro de 2px */
+    -webkit-text-stroke: 2px black;
+    position: relative;
+    z-index: 2;
+    margin-top: 50px;
 }
 
 .hero-section h2 {
@@ -205,7 +220,10 @@
     color: transparent;
     text-align: right;
     margin: 0;
-    -webkit-text-stroke: 2px black; /* Añade borde negro de 2px */
+    -webkit-text-stroke: 2px black;
+    position: relative;
+    z-index: 2;
+    margin-top: -10px;
 }
 
  .hero-content{
@@ -253,7 +271,7 @@
     position: relative;
     width: 100%;
     min-height: 100vh;
-    background-color: #E8E8E8;
+    background-color: rgb(255, 192, 203);
     padding: 2rem;
     z-index: 1;
     margin-top: -70px;
@@ -324,9 +342,56 @@ body {
 
 .wave svg {
     position: relative;
-    width: 102%;
+    width: 100%;
     height: 100%;
     display: block;
-    left: -1%;
+    left: 0;
+}
+
+.hero-button {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+
+.hero-button button {
+    background-color: rgba(255, 192, 203, 0.8);
+    border: none;
+    border-radius: 30px;
+    padding: 15px 40px;
+    min-width: 200px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    font-size: 1.5rem;
+    font-family: var(--ff-luckiest-guy);
+    backdrop-filter: blur(5px);
+}
+
+.hero-button button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+.button-text{
+  color: black;
+  -webkit-text-stroke: 1px white;
+  text-decoration: none;
+}
+
+.section-title {
+    text-align: center;
+    padding: 2.65rem 0 2rem 0;
+    position: relative;
+    z-index: 2;
+}
+
+.section-title h3 {
+    font-family: var(--ff-luckiest-guy);
+    font-size: var(--fs-3);
+    color: black;
+    -webkit-text-stroke: 1px white;
+    margin: 0;
 }
 
