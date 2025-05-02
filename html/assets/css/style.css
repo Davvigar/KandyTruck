@@ -307,7 +307,7 @@ body {
 
 .wave {
     position: absolute;
-    top: -70px;
+    top: -67px;
     left: -5px;
     width: calc(100% + 10px);
     height: 70px;
@@ -534,5 +534,115 @@ body {
 
 .payment-icons img:hover {
     filter: grayscale(0%);
+}
+
+@media screen and (max-width: 1536px) and (max-height: 695px) {
+    :root {
+        --fs-1: 4rem;
+        --fs-2: 3.5rem;
+        --fs-3: 2rem;
+        --fs-4: 1.6rem;
+        --fs-5: 1.2rem;
+        --fs-6: 1rem;
+        --logo-size: 80px;
+    }
+
+    .hero-section {
+        height: 85vh;
+        padding-bottom: 150px;
+        margin-top: 50px;
+    }
+
+    .truck-image {
+        width: 140px;
+        top: 15%;
+        left: 88%;
+        margin-top: -50px;
+    }
+
+    .hero-button {
+        top: 35%;
+    }
+
+    .hero-button button {
+        padding: 12px 30px;
+        min-width: 180px;
+        font-size: 1.2rem;
+    }
+
+    .products-section {
+        min-height: 85vh;
+        padding: 1.5rem;
+        margin-top: -50px;
+    }
+
+    .grid-container {
+        gap: 1.5rem;
+        padding: 1.5rem;
+    }
+
+    .cotton-candy-text {
+        font-size: var(--fs-4);
+        top: 5%;
+    }
+
+    .cotton-candy img {
+        max-width: 50%;
+        max-height: 50%;
+        margin-top: 3rem;
+    }
+
+    .coloboration-container {
+        min-height: 85vh;
+        padding: 0.5rem 1.5rem;
+    }
+
+    .image-row img {
+        width: 120px;
+        height: 120px;
+        margin: 0 1.5rem;
+    }
+
+    .section-title {
+        padding: 2rem 0 1.5rem 0;
+    }
+
+    .section-subtext {
+        font-size: 1rem;
+        max-width: 600px;
+    }
+
+    .off-screen-menu {
+        height: 35vh;
+        max-width: 500px;
+        padding: 0.8rem 3rem;
+    }
+
+    .menu-items {
+        font-size: 1.8rem;
+        margin-top: -2rem;
+    }
+
+    .white-worm img {
+        width: 95px;
+        transform: translateY(-0.7rem);
+    }
+
+    .wave {
+        height: 60px;
+    }
+
+    .scrolling-row {
+        margin: 1.5rem 0;
+    }
+
+    @keyframes scroll {
+        0% {
+            transform: translateX(0);
+        }
+        100% {
+            transform: translateX(-100%);
+        }
+    }
 }
 
