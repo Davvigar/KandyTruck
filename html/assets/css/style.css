@@ -395,3 +395,36 @@ body {
     margin: 0;
 }
 
+.section-subtext {
+    font-family: var(--ff-luckiest-guy);
+    font-size: 1.2rem;
+    color: black;
+    margin-top: 1rem;
+    line-height: 1.5;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  
+}
+
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 3rem;
+    }
+    
+    .hero h2 {
+        font-size: 2rem;
+    }
+    
+    .hero-subtext {
+        font-size: 1rem;
+        padding: 0 1rem;
+    }
+
+    .section-subtext {
+        font-size: 1rem;
+        padding: 0 1rem;
+    }
+}
+
