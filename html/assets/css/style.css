@@ -482,11 +482,13 @@ body {
     overflow: hidden;
     white-space: nowrap;
     margin: 2rem 0;
+    position: relative;
 }
 
 .image-row {
     display: inline-block;
-    animation: scroll 30s linear infinite;
+    animation: scroll 40s linear infinite;
+    white-space: nowrap;
 }
 
 .scrolling-row.right .image-row {
@@ -598,9 +600,9 @@ body {
     }
 
     .image-row img {
-        width: 120px;
-        height: 120px;
-        margin: 0 1.5rem;
+        width: 100px;
+        height: 100px;
+        margin: 0 1rem;
     }
 
     .section-title {
@@ -633,16 +635,11 @@ body {
     }
 
     .scrolling-row {
-        margin: 1.5rem 0;
+        margin: 1rem 0;
     }
 
-    @keyframes scroll {
-        0% {
-            transform: translateX(0);
-        }
-        100% {
-            transform: translateX(-100%);
-        }
+    .image-row {
+        animation-duration: 30s;
     }
 }
 
