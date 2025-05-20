@@ -46,10 +46,10 @@
     left: -800px;
     display: flex;
     flex-direction: column; /* Stack items vertically */
-    align-items: flex-start; /* Align items to the left */
-    padding: 1rem 4rem; /* Reduced top padding from 2rem to 1rem */
+    padding-left:100px;
     transition: 0.3s ease;
     text-decoration: none;
+    
     }
     
     .off-screen-menu.active{
@@ -116,8 +116,10 @@
       font-family: var(--ff-luckiest-guy);
       font-weight: 400;
       list-style: none; 
-      flex: 2; /* Toma dos partes del espacio disponible */
+      flex: 2; 
       -webkit-text-stroke: 1px black; 
+      padding-left: 10px;
+      padding-top: 10px;
       
       
       margin-top: -3rem; /* Negative margin to move list up */
@@ -135,19 +137,12 @@
     }
 
     .white-worm img{
-      width: 115px;
+      width: 200px;
       height: auto;
-      transform: translateY(-0.85rem); /* Adjusted transform value */
-      padding-left: 12px;
+      padding-top: px;
+    
+      padding-left: 20px;
      
-    }
-
-    .white-worm {
-      flex: 1; /* Toma una parte del espacio disponible */
-      align-self: flex-start; /* Alinea el contenedor al inicio */
-      margin-top: -1rem; /* Negative margin to move it up */
-      margin-right: 2rem; /* Añadir espacio después de la imagen */
-      margin-bottom: 1rem; /* Reduced from 2rem to bring list closer */
     }
 
 
@@ -634,7 +629,8 @@ body {
     }
 
     .wave {
-        height: 60px;
+        height: 40px;
+        top: -39px;
     }
 }
 
