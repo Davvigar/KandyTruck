@@ -92,6 +92,7 @@
       top: 50%;
       transform: translate(-50%,-50%) rotate(45deg);
       background-color: pink;
+      border: 1px solid black;
       
       
     }
@@ -104,6 +105,7 @@
       transform: translate(-50%,-50%) rotate(-45deg);
       background-color: var(--green-cyane);
       -webkit-text-stroke: 1px black; 
+      border: 1px solid black;
     }
 
     .menu-items{
@@ -130,10 +132,11 @@
     .menu-item a {
       text-decoration: none; 
       color: white; 
+      font-size: 20px;
     }
 
     .menu-item {
-      margin-bottom: 1rem; /* Ajusta el espacio entre elementos de la lista */
+      margin-bottom: 0,2rem; 
     }
 
     .white-worm img{
@@ -270,6 +273,8 @@
     padding: 2rem;
     z-index: 1;
     margin-top: -70px;
+    margin-bottom: 0; /* Añadido para eliminar espacio */
+    padding-bottom: 0; /* Añadido para eliminar espacio */
 }
 
 body {
@@ -279,10 +284,10 @@ body {
 .grid-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
+    gap: 1rem; /* Reducido de 2rem para juntar los elementos */
     width: 100%;
     padding: 2rem;
-    max-width: 1200px;
+    max-width: 900px; /* Reducido de 1200px para que estén más juntos */
     margin: 0 auto;
 }
 
@@ -398,15 +403,16 @@ body {
 
     .grid-container {
         grid-template-columns: 1fr;
-        gap: 1.5rem;
+        gap: 1rem; /* Mantener la consistencia en móvil */
     }
 }
 
 .cotton-candy {
     background-color: var(--green-cyane);
     border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
-    width: 100%;
-    aspect-ratio: 1;
+    width: 80%; /* Ajustado para mantener el tamaño pero más juntos */
+    margin: 0 auto; /* Centrar el contenedor */
+    aspect-ratio: 1; /* Mantiene la forma circular */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -424,12 +430,12 @@ body {
 
 .cotton-candy-text {
     font-family: var(--ff-luckiest-guy);
-    font-size: var(--fs-3);
+    font-size: calc(var(--fs-3) * 0.8); /* Reducir también el tamaño del texto */
     color: black;
     text-align: center;
     -webkit-text-stroke: 0.5px white;
     position: absolute;
-    top: 8%;
+    top: 15%; /* Ajustamos la posición del texto */
     left: 0;
     width: 100%;
     padding: 1rem 1rem;
@@ -439,23 +445,23 @@ body {
 }
 
 .cotton-candy img {
-    max-width: 60%;
-    max-height: 60%;
+    max-width: 60%; /* Volvemos a 60% para mantener proporciones */
+    max-height: 60%; /* Volvemos a 60% para mantener proporciones */
     object-fit: contain;
     border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
     position: relative;
     z-index: 1;
-    margin-top: 2rem;
+    margin-top: 4rem; /* Ajustamos el margen superior */
 }
 
 .coloboration-container {
     position: relative;
     width: 100%;
-    min-height: 100vh;
-    background-color: rgb(255, 192, 203);
+    min-height: auto;
+    background-color: transparent;
     padding: 0.5rem 2rem;
     z-index: 1;
-    margin-top: -30px;
+    margin-top: 0; /* Cambiado de 100px a 0 */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -469,14 +475,15 @@ body {
     text-align: center;
     -webkit-text-stroke: 1px white;
     margin: 0;
-    padding-top: 1rem;
+    padding-top: 1rem; /* Reducido de 3rem a 1rem */
+    margin-bottom: 2rem; /* Añadido margen inferior */
 }
 
 .scrolling-row {
     width: 100%;
     overflow: hidden;
     white-space: nowrap;
-    margin: 2rem 0;
+    margin: 3rem 0; /* Aumentado de 2rem a 3rem para más espacio entre filas */
     position: relative;
     transform: translate3d(0, 0, 0);
 }
@@ -674,4 +681,174 @@ body {
 .payment-icons img:hover {
     filter: grayscale(0%);
 }
+.footer {
+    background-color: #FFE300;
+    position: relative;
+    padding: 4rem 2rem 2rem;
+    margin-top: 6rem; /* Aumentado para dar espacio a la onda */
+}
+
+.footer-wave {
+    position: absolute;
+    top: -150px; /* Ajustado para que se vea mejor */
+    left: 0;
+    width: 100%;
+    height: 150px; /* Ajustado para que coincida con el top */
+    overflow: hidden;
+}
+
+.footer-wave svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+    transform: scale(1, 0.3); /* Ajustado para que la onda sea más suave */
+}
+
+/* Ocultar el rectángulo de fondo */
+.footer-wave svg rect {
+    display: none;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-section h3 {
+    font-family: var(--ff-luckiest-guy);
+    color: #472F00;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.footer-form {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 3rem;
+}
+
+.footer-form input {
+    flex: 1;
+    padding: 0.8rem;
+    border: none;
+    border-radius: 4px;
+}
+
+.footer-form button {
+    background-color: #472F00;
+    color: white;
+    border: none;
+    padding: 0.8rem 2rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: var(--ff-luckiest-guy);
+}
+
+.footer-columns {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.footer-column h4 {
+    color: #472F00;
+    font-family: var(--ff-luckiest-guy);
+    margin-bottom: 1rem;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li a {
+    color: #472F00;
+    text-decoration: none;
+    line-height: 1.8;
+}
+
+.social-icons {
+    display: flex;
+    gap: 1rem;
+}
+
+.social-icons img {
+    width: 36px;
+    height: 36px;
+}
+
+@media (max-width: 768px) {
+    .footer-form {
+        flex-direction: column;
+    }
+    
+    .footer-columns {
+        grid-template-columns: 1fr;
+    }
+}
+
+.coloboration-section {
+    position: relative;
+    margin-bottom: 0;
+    padding-bottom: 200px; /* Aumentado para cubrir el espacio en blanco */
+    background-color: rgb(255, 192, 203);
+    min-height: 100vh;
+    z-index: 0;
+}
+
+.footer-wave {
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    height: 200px; /* Aumentado de 150px a 200px */
+    overflow: visible; /* Cambiado de hidden a visible */
+    z-index: 1;
+    margin-bottom: -1px; /* Añadido para eliminar el gap */
+}
+
+.footer-wave svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+    transform: scale(1.2, 0.5); /* Ajustado el scale para estirar horizontal y verticalmente */
+    vertical-align: bottom; /* Añadido para eliminar espacio inferior */
+}
+
+.footer {
+    position: relative;
+    background-color: #FFE300;
+    margin-top: -1px; /* Ajustado para eliminar el gap */
+    padding-top: 2rem;
+    z-index: 1; /* Aseguramos que el footer esté por encima */
+}
+
+.footer h3, 
+.footer h4,
+.footer-form button,
+.footer-column ul li a {
+    font-family: var(--ff-luckiest-guy);
+}
+
+.footer h3 {
+    font-size: var(--fs-3);
+    color: #472F00;
+}
+
+.footer h4 {
+    font-size: var(--fs-4);
+    color: #472F00;
+    margin-bottom: 1.5rem;
+}
+
+.footer-column ul li a {
+    font-size: var(--fs-6);
+    letter-spacing: 0.5px;
+}
+
+.footer-form button {
+    font-size: 1rem;
+    letter-spacing: 0.5px;
+}
+
 
