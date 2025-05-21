@@ -57,3 +57,56 @@ if (leftRow && rightRow) {
         rightRow.style.transform = `translateX(${-scrollPosition * scrollSpeed}px)`;
     });
 }
+
+// Función para cambiar el color de fondo de la sección
+function setupValuesSectionHover() {
+    // Seleccionar todas las secciones y elementos que necesitamos
+    const allSections = document.querySelectorAll('section');
+    const teamGrid = document.querySelector('.team-grid');
+    const valuesPhoto = document.querySelector('.values-photo');
+    const inclusion = document.querySelector('.inclusion');
+    const creativity = document.querySelector('.creativity');
+    const quality = document.querySelector('.quality');
+
+    const colors = {
+        inclusion: '#FFB6D5',
+        creativity: '#FF73F8',
+        quality: '#C69CFF',
+        default: '#FFE5E5'
+    };
+
+    const elements = [...allSections, teamGrid, valuesPhoto];
+
+    const changeBackgroundColor = (color) => {
+        // Pre-configure all transitions
+        elements.forEach(element => {
+            if (element) {
+                element.style.transition = 'background-color 0.2s ease';
+            }
+        });
+
+        // Use requestAnimationFrame for smooth synchronous color change
+        requestAnimationFrame(() => {
+            elements.forEach(element => {
+                if (element) {
+                    element.style.backgroundColor = color;
+                }
+            });
+        });
+    };
+
+    // Event listeners
+    const handleMouseEnter = (color) => () => changeBackgroundColor(color);
+    const handleMouseLeave = () => changeBackgroundColor(colors.default);
+
+    inclusion.addEventListener('mouseenter', handleMouseEnter(colors.inclusion));
+    creativity.addEventListener('mouseenter', handleMouseEnter(colors.creativity));
+    quality.addEventListener('mouseenter', handleMouseEnter(colors.quality));
+
+    [inclusion, creativity, quality].forEach(element => {
+        element.addEventListener('mouseleave', handleMouseLeave);
+    });
+}
+
+// Asegurarnos de que el DOM está cargado
+document.addEventListener('DOMContentLoaded', setupValuesSectionHover);
