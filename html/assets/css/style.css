@@ -1546,4 +1546,187 @@ section {
     }
 }
 
+/* Media Queries para móvil */
+@media screen and (max-width: 768px) {
+    :root {
+        --fs-1: 3rem;
+        --fs-2: 2.5rem;
+        --fs-3: 1.8rem;
+        --fs-4: 1.4rem;
+        --fs-5: 1.2rem;
+        --fs-6: 1rem;
+        --logo-size: 60px;
+    }
+
+    /* Header y navegación */
+    .off-screen-menu {
+        width: 100%;
+        padding-left: 20px;
+    }
+
+    .white-worm img {
+        width: 120px;
+    }
+
+    .menu-items {
+        font-size: 1.5rem;
+        margin-top: -1rem;
+        margin-left: -1rem;
+    }
+
+    /* Hero section */
+    .hero-section {
+        padding-right: 2%;
+        margin-top: 60px;
+    }
+
+    .truck-image {
+        width: 120px;
+        left: 85%;
+    }
+
+    /* Grid y secciones */
+    .grid-container {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        padding: 1rem;
+    }
+
+    .section-title h3 {
+        font-size: var(--fs-3);
+    }
+
+    .section-subtext {
+        font-size: var(--fs-5);
+    }
+
+    /* Team grid */
+    .team-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        padding: 1rem;
+    }
+
+    .team-member1, .team-member2, .team-member3, .team-member4, .team-member5 {
+        grid-area: auto;
+    }
+
+    /* Services section */
+    .services-container {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        padding: 1rem;
+    }
+
+    .service-box {
+        padding: 1rem;
+    }
+
+    /* Schedule section */
+    .schedule-container {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        padding: 1rem;
+    }
+
+    /* Contact section */
+    .contact-container {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    .contact-info {
+        margin-bottom: 2rem;
+    }
+
+    .form-group {
+        flex-direction: column;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+
+    /* Footer */
+    .footer-content {
+        padding: 1rem;
+    }
+
+    .footer-columns {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .footer-section h3 {
+        font-size: var(--fs-4);
+    }
+
+    .footer-form {
+        flex-direction: column;
+    }
+
+    .footer-form input {
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+
+    /* Blob texts */
+    .bloob-text, .bloob-text2, .bloob-text3, .bloob-text4,
+    .bloob-text5, .bloob-text6, .bloob-text7, .bloob-text8,
+    .bloob-text9, .bloob-text10 {
+        font-size: var(--fs-5);
+    }
+
+    /* Values section */
+    .values, .whowe {
+        padding: 1rem;
+    }
+
+    .values h2, .whowe h2 {
+        font-size: var(--fs-3);
+    }
+
+    .inclusion, .creativity, .quality {
+        padding: 1rem;
+    }
+
+    .inclusion h2, .creativity h2, .quality h2 {
+        font-size: var(--fs-4);
+    }
+
+    .inclusion p, .creativity p, .quality p {
+        font-size: var(--fs-5);
+    }
+}
+
+/* Media Queries para tablets */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    :root {
+        --fs-1: 4rem;
+        --fs-2: 3.5rem;
+        --fs-3: 2rem;
+        --fs-4: 1.6rem;
+        --fs-5: 1.3rem;
+        --fs-6: 1.1rem;
+    }
+
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .team-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .services-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .schedule-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
 
