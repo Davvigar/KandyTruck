@@ -1,0 +1,21 @@
+DOCUMENTACIÓN DEL PROYECTO KANDYTRUCK
+=====================================
+
+5.1 Variables CSS
+----------------
+:root {
+    --comex-paleacate: rgb(255,236,179);
+    --green-cyane: rgb(168, 230, 207);
+    --pale-orange: rgb(255, 211, 182);
+    --pink: rgb(255, 192, 203);
+    --brown: rgb(139, 69, 19);
+    --fs-1: 5rem;
+    --fs-2: 4.5rem;
+    --fs-3: 2.4rem;
+    --fs-4: 1.8rem;
+    --fs-5: 1.4rem;
+    --fs-6: 1.2rem;
+    --ff-luckiest-guy: 'Luckiest Guy', cursive;
+    --logo-size: 100px;
+    --transition: 0.25s ease;
+} 
